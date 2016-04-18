@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let backImg: UIImage = UIImage(named: "backarrow")!
+        UIBarButtonItem.appearance().setBackButtonBackgroundImage(backImg, forState: .Normal, barMetrics: .Default)
+    UIBarButtonItem.appearance().setBackButtonTitlePositionAdjustment(UIOffsetMake(-66, 0), forBarMetrics: .Default)
+        
+        UIApplication.sharedApplication().statusBarStyle = .LightContent
+        
         return true
     }
 
